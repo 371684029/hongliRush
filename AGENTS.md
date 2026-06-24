@@ -16,6 +16,12 @@
 - `src/App.tsx`：页面骨架与各板块组装。
 - `src/index.css`：全局样式与主题变量。
 
+## 维护者与署名约定（永久）
+
+- 本项目所有提交署名、作者信息统一使用：**`wll <371684029@qq.com>`**。
+- Git 提交必须以该身份进行：`user.name = wll`、`user.email = 371684029@qq.com`（已配置；若在新环境请重新设置 local 与 global）。
+- `package.json` 的 `author` 字段同样为 `wll <371684029@qq.com>`，新增需要署名的文档/配置时请沿用该署名，不要使用其它作者名。
+
 ## Cursor Cloud specific instructions
 
 - 这是纯前端应用，无后端 / 数据库 / 外部服务依赖，单个 `npm run dev` 即可端到端运行与验证。

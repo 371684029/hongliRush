@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "type": "module",
   "description": "hongliRush - 大A红利金融投资日报",
+  "author": "wll <371684029@qq.com>",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
