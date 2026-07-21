@@ -22,9 +22,18 @@
 - Git 提交必须以该身份进行：`user.name = wll`、`user.email = 371684029@qq.com`（已配置；若在新环境请重新设置 local 与 global）。
 - `package.json` 的 `author` 字段同样为 `wll <371684029@qq.com>`，新增需要署名的文档/配置时请沿用该署名，不要使用其它作者名。
 
+## 架构（两部分）
+
+- **量化研判引擎** `src/engine/`（Node + TypeScript，用 `tsx` 直接运行）：采集 Yahoo 真实行情 → 量化打分/双打分/反驳/情景/门禁/可信度 → SQLite 回测校准 → 输出 `docs/*.md` 与 `public/hongli-latest.json`。命令见 README「命令一览」。
+- **Web 仪表盘** `src/`（React + Vite）：消费 `public/hongli-latest.json` 渲染日报。
+
 ## Cursor Cloud specific instructions
 
-- 这是纯前端应用，无后端 / 数据库 / 外部服务依赖，单个 `npm run dev` 即可端到端运行与验证。
-- 配色遵循 A 股「红涨绿跌」习惯：`--up` 为红色、`--down` 为绿色（见 `src/index.css`），改动涨跌色时不要按欧美习惯反过来。
-- Vite 已配置 `server.host: true`，因此可通过 VM 的对外地址访问；开发端口为 `5173`。
-- 所有行情/基金数值均来自 `src/data/report.ts` 的静态演示数据，不会自动更新；页面内容仅为演示，不构成投资建议。
+- **Web 依赖引擎产物**：前端读取 `public/hongli-latest.json`。若该文件缺失，页面会显示「数据未就绪」并提示先运行 `npm run analysis`。仓库已提交一份种子 JSON，克隆后 `npm run dev` 即可直接看到；要刷新为最新真实数据则先 `npm run analysis`。
+- **真实行情依赖外网**：引擎从 `query1/query2.finance.yahoo.com` 拉取行情，需要出网。Yahoo 对红利**指数**（如 `000922.SS`）只给 1d/5d 行情，长历史/技术指标/回测一律用其**跟踪 ETF**（如 `515080.SS`）；改数据源时注意保持这一映射（见 `src/engine/symbols.ts`）。
+- **回测/命中率样本**：`analysis` 只写当日一条报告；要让 `calibrate` 和「历史预测对错」立刻有样本，先跑 `npm run engine backfill`（用真实 ETF 历史逐日重算，无前视偏差），再 `npm run analysis`。
+- **SQLite 本地库** `data/hongli.db` 由引擎自动创建，已在 `.gitignore` 忽略；删除后下次运行会重建（历史报告会丢失，需重新 backfill）。`better-sqlite3` 为原生模块，靠 `npm install` 编译，无需额外系统依赖。
+- **引擎类型检查**独立于前端：用 `npm run typecheck:engine`（`tsconfig.engine.json`）；前端 `npm run build` 已排除 `src/engine`，ESLint 对引擎用 node 全局。
+- 配色遵循 A 股「红涨绿跌」：`--up` 红、`--down` 绿（见 `src/index.css`），勿按欧美习惯反置。
+- Vite 已配置 `server.host: true`，可经 VM 对外地址访问，开发端口 `5173`。
+- 页面/报告仅为投资研究演示，不构成投资建议。
