@@ -1,0 +1,388 @@
+{
+  "date": "2026-07-21",
+  "generatedAt": "2026-07-21T07:34:28.754Z",
+  "headline": "大A红利研判 偏多（研判分 62/量化 60）· 标准配置：维持红利底仓，按定投节奏分批买入",
+  "indices": [
+    {
+      "name": "中证红利",
+      "code": "000922",
+      "price": 5391.09,
+      "changePct": -1.09,
+      "historyBars": 266,
+      "ma20": null,
+      "rsi14": 68.8,
+      "return20d": 2.0763563295378376,
+      "fiftyTwoWeekHigh": 5501.556,
+      "fiftyTwoWeekLow": 5377.1514,
+      "refYield": 5.4
+    },
+    {
+      "name": "上证红利",
+      "code": "000015",
+      "price": 3129.306,
+      "changePct": -1.41,
+      "historyBars": 266,
+      "ma20": null,
+      "rsi14": 70.6,
+      "return20d": 3.253865979381443,
+      "fiftyTwoWeekHigh": 3202.935,
+      "fiftyTwoWeekLow": 3121.3733,
+      "refYield": 5.1
+    },
+    {
+      "name": "沪深300红利",
+      "code": "000821",
+      "price": 6513.266,
+      "changePct": -1.29,
+      "historyBars": 1,
+      "ma20": null,
+      "rsi14": null,
+      "return20d": null,
+      "fiftyTwoWeekHigh": 6665.707,
+      "fiftyTwoWeekLow": 6488.241,
+      "refYield": 3.6
+    }
+  ],
+  "funds": [
+    {
+      "name": "华泰柏瑞上证红利ETF",
+      "code": "510880",
+      "type": "股票型 ETF",
+      "trackingIndex": "上证红利 000015",
+      "nav": 3.205,
+      "changePct": 0.63,
+      "yearReturn": -2.9,
+      "reason": "上证红利老牌龙头，规模大、流动性好、分红稳定，红利底仓优选。"
+    },
+    {
+      "name": "招商中证红利ETF",
+      "code": "515080",
+      "type": "股票型 ETF",
+      "trackingIndex": "中证红利 000922",
+      "nav": 1.524,
+      "changePct": 0.53,
+      "yearReturn": -5.5,
+      "reason": "跟踪中证红利，行业更分散、股息率较高，适合作为红利核心配置。"
+    },
+    {
+      "name": "华泰柏瑞中证红利低波ETF",
+      "code": "512890",
+      "type": "股票型 ETF",
+      "trackingIndex": "中证红利低波动 H30269",
+      "nav": 1.16,
+      "changePct": 0.69,
+      "yearReturn": -4.4,
+      "reason": "红利+低波双因子，回撤更小、夏普更优，震荡市的进攻型防御选择。"
+    },
+    {
+      "name": "景顺长城中证红利低波100ETF",
+      "code": "515100",
+      "type": "股票型 ETF",
+      "trackingIndex": "红利低波100 930955",
+      "nav": 1.414,
+      "changePct": 1.22,
+      "yearReturn": -10.3,
+      "reason": "成分覆盖更广、波动更低，适合追求平稳持有体验的稳健型投资者。"
+    }
+  ],
+  "quant": {
+    "score": 60,
+    "direction": "bullish",
+    "factors": {
+      "trend": {
+        "name": "趋势(MA20乖离)",
+        "rawValue": 3.52,
+        "signal": 71.13235743640261,
+        "weight": 0.22,
+        "contribution": 15.65
+      },
+      "rsi": {
+        "name": "RSI(14)",
+        "rawValue": 68.75,
+        "signal": 69,
+        "weight": 0.14,
+        "contribution": 9.66
+      },
+      "macd": {
+        "name": "MACD动能",
+        "rawValue": -0.89,
+        "signal": 44.67794298099519,
+        "weight": 0.14,
+        "contribution": 6.25
+      },
+      "bollinger": {
+        "name": "布林带(%B)",
+        "rawValue": 0.903,
+        "signal": 10,
+        "weight": 0.1,
+        "contribution": 1
+      },
+      "valuation": {
+        "name": "估值(点位百分位)",
+        "rawValue": 8.8,
+        "signal": 90,
+        "weight": 0.18,
+        "contribution": 16.2
+      },
+      "volatility": {
+        "name": "波动率(ATR%)",
+        "rawValue": 1.16,
+        "signal": 46,
+        "weight": 0.1,
+        "contribution": 4.6
+      },
+      "relativeStrength": {
+        "name": "相对强弱(低波/红利)",
+        "rawValue": 1.68,
+        "signal": 56.72140831333338,
+        "weight": 0.12,
+        "contribution": 6.81
+      }
+    }
+  },
+  "verdict": {
+    "quantScore": 60,
+    "quantDirection": "bullish",
+    "researchScore": 62,
+    "researchDirection": "bullish",
+    "delta": 2,
+    "alignment": "aligned",
+    "sameDirection": true,
+    "actionable": true,
+    "rebuttal": {
+      "strength": "moderate",
+      "bearScore": 30,
+      "penaltyPct": 0.2,
+      "factors": [
+        "RSI 69 偏高",
+        "MACD 出现死叉，动能转弱"
+      ]
+    },
+    "valuationTilt": 4.9
+  },
+  "gate": {
+    "tier": "green",
+    "actionable": true,
+    "confidence": 100,
+    "anchorDeviationPct": 0,
+    "reasons": [],
+    "banners": [
+      "✅ 数据高可信（置信度 100%）"
+    ],
+    "missing": []
+  },
+  "reliability": {
+    "score": 95,
+    "tier": "high",
+    "emoji": "🟢",
+    "label": "可信度较高",
+    "scoreBand": {
+      "low": 58,
+      "high": 66,
+      "center": 62
+    },
+    "bandHalfWidth": 4,
+    "factors": [
+      {
+        "name": "数据质量",
+        "ok": true,
+        "detail": "绿档 · 置信 100%",
+        "weight": 35,
+        "points": 35
+      },
+      {
+        "name": "双打分",
+        "ok": true,
+        "detail": "研判 62 · 量化 60 · Δ+2（对齐良好）",
+        "weight": 30,
+        "points": 30
+      },
+      {
+        "name": "反驳强度",
+        "ok": true,
+        "detail": "看空力度 30/100 · 中反驳",
+        "weight": 15,
+        "points": 10
+      },
+      {
+        "name": "历史校准",
+        "ok": true,
+        "detail": "样本充足 28 · 偏保守",
+        "weight": 15,
+        "points": 15
+      },
+      {
+        "name": "滚动命中",
+        "ok": true,
+        "detail": "近窗命中 69%（n=42）",
+        "weight": 5,
+        "points": 5
+      }
+    ],
+    "warnings": [],
+    "tldr": {
+      "line1": "研判 **58–66**/100（中心 62）· 偏多",
+      "line2": "🙂 建议仓位 60%（标准配置）· 维持红利底仓，按定投节奏分批买入",
+      "line3": "🟢 可信度较高 95/100"
+    }
+  },
+  "scenarios": [
+    {
+      "name": "乐观情景",
+      "probability": 34,
+      "expectedReturn20d": 4.2,
+      "note": "红利风格延续、估值修复，高股息资产获增量资金"
+    },
+    {
+      "name": "中性震荡",
+      "probability": 40,
+      "expectedReturn20d": 0,
+      "note": "区间波动，靠股息与低波获取相对收益"
+    },
+    {
+      "name": "谨慎情景",
+      "probability": 26,
+      "expectedReturn20d": -4.5,
+      "note": "利率上行或风险偏好回升，红利阶段跑输成长"
+    }
+  ],
+  "tailRisk": {
+    "level": "medium",
+    "drawdownFromHigh": -10.1,
+    "atrPct": 1.16,
+    "note": "波动中等，按纪律分批、不追高"
+  },
+  "position": {
+    "targetPct": 60,
+    "label": "标准配置",
+    "emoji": "🙂",
+    "headline": "维持红利底仓，按定投节奏分批买入"
+  },
+  "calibration": {
+    "sampleSize": 28,
+    "upRate": 60.7,
+    "bias": "偏保守"
+  },
+  "track": {
+    "windowDays": 120,
+    "sample": 77,
+    "hitRate": 0.6904761904761905,
+    "hits": 29,
+    "total": 42,
+    "recent": [
+      {
+        "date": "2026-07-14",
+        "researchScore": 70,
+        "quantScore": 65,
+        "pred": "up",
+        "actual5dPct": 2.01,
+        "status": "hit"
+      },
+      {
+        "date": "2026-07-13",
+        "researchScore": 69,
+        "quantScore": 63,
+        "pred": "up",
+        "actual5dPct": 4.77,
+        "status": "hit"
+      },
+      {
+        "date": "2026-07-10",
+        "researchScore": 67,
+        "quantScore": 61,
+        "pred": "up",
+        "actual5dPct": 2.26,
+        "status": "hit"
+      },
+      {
+        "date": "2026-07-09",
+        "researchScore": 63,
+        "quantScore": 57,
+        "pred": "up",
+        "actual5dPct": 2.74,
+        "status": "hit"
+      },
+      {
+        "date": "2026-07-08",
+        "researchScore": 62,
+        "quantScore": 56,
+        "pred": "up",
+        "actual5dPct": 2.43,
+        "status": "hit"
+      },
+      {
+        "date": "2026-07-07",
+        "researchScore": 62,
+        "quantScore": 56,
+        "pred": "up",
+        "actual5dPct": 1.56,
+        "status": "hit"
+      },
+      {
+        "date": "2026-07-06",
+        "researchScore": 64,
+        "quantScore": 58,
+        "pred": "up",
+        "actual5dPct": -1.54,
+        "status": "miss"
+      },
+      {
+        "date": "2026-07-03",
+        "researchScore": 63,
+        "quantScore": 57,
+        "pred": "up",
+        "actual5dPct": -0.27,
+        "status": "miss"
+      },
+      {
+        "date": "2026-07-02",
+        "researchScore": 63,
+        "quantScore": 57,
+        "pred": "up",
+        "actual5dPct": 0.9,
+        "status": "hit"
+      },
+      {
+        "date": "2026-07-01",
+        "researchScore": 61,
+        "quantScore": 55,
+        "pred": "up",
+        "actual5dPct": 3.21,
+        "status": "hit"
+      },
+      {
+        "date": "2026-06-30",
+        "researchScore": 60,
+        "quantScore": 54,
+        "pred": "up",
+        "actual5dPct": 4.33,
+        "status": "hit"
+      },
+      {
+        "date": "2026-06-29",
+        "researchScore": 60,
+        "quantScore": 54,
+        "pred": "up",
+        "actual5dPct": 3.76,
+        "status": "hit"
+      },
+      {
+        "date": "2026-06-26",
+        "researchScore": 60,
+        "quantScore": 54,
+        "pred": "up",
+        "actual5dPct": 2.45,
+        "status": "hit"
+      },
+      {
+        "date": "2026-06-25",
+        "researchScore": 60,
+        "quantScore": 54,
+        "pred": "up",
+        "actual5dPct": -0.48,
+        "status": "miss"
+      }
+    ]
+  },
+  "disclaimer": "本报告由本地量化引擎基于公开行情自动生成，仅供投资研究参考，不构成任何投资建议。市场有风险，投资需谨慎。"
+}
