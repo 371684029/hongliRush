@@ -12,6 +12,12 @@ dist-ssr
 *.local
 *.tsbuildinfo
 
+# 引擎本地数据库（SQLite，自动生成）
+/data/
+*.db
+*.db-shm
+*.db-wal
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

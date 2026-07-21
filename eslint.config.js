@@ -8,7 +8,8 @@ export default tseslint.config(
   { ignores: ['dist'] },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
-    files: ['**/*.{ts,tsx}'],
+    files: ['src/**/*.{ts,tsx}'],
+    ignores: ['src/engine/**'],
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
@@ -23,6 +24,14 @@ export default tseslint.config(
         'warn',
         { allowConstantExport: true },
       ],
+    },
+  },
+  {
+    extends: [js.configs.recommended, ...tseslint.configs.recommended],
+    files: ['src/engine/**/*.ts'],
+    languageOptions: {
+      ecmaVersion: 2022,
+      globals: globals.node,
     },
   },
 )
